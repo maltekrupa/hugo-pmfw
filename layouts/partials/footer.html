@@ -1,0 +1,12 @@
+<hr>
+{{- if .Site.Copyright -}}
+<p>{{ .Site.Copyright }}</p>
+{{- end -}}
+{{ range $index, $element := .Site.Params.Nav.Bottom }}
+<a href="{{ $element.url }}">{{ $element.title }}</a>{{ if not $index }} |{{ end }}
+{{ end }}
+<p>
+The theme is based on <a href="https://perfectmotherfuckingwebsite.com/">perfectmotherfuckingwebsite.com</a>
+<br />
+Find it here: <a href="https://github.com/maltekrupa/hugo-pmfw">github.com/maltekrupa/hugo-pmfw</a>
+</p>

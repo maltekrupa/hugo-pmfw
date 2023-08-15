@@ -1,0 +1,10 @@
+<h2>{{ .Site.Title }}</h2>
+<p>{{ .Site.Params.Slogan }}</p>
+<nav>
+<a href="/">Home</a> |
+{{ range .Site.Params.Nav.Top }}
+<a href="{{ .url }}">{{ .title }}</a> |
+{{ end }}
+<a href="{{ with .Site.GetPage "/blog" }}{{ .Page.RelPermalink }}{{ end }}">Blog</a>
+</nav>
+<hr>
