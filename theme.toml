@@ -6,7 +6,7 @@ license = "MIT"
 licenselink = "https://github.com/maltekrupa/hugo-pmfw/blob/main/LICENSE"
 description = "Simple theme based on https://perfectmotherfuckingwebsite.com/"
 homepage = "https://github.com/maltekrupa/hugo-pmfw"
-tags = [simple, nojs]
+tags = ["simple", "nojs"]
 features = []
 min_version = "0.117.0"
 
