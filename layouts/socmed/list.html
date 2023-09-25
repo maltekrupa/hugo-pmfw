@@ -1,11 +1,10 @@
 {{ define "main" }}
 <ul style="list-style-type: none;">
-  {{ range .Pages }}
-    <li>
-      {{ .Content }}
-      <p><a href="{{ .Permalink }}"><time datetime="{{ .Date | time.Format "2006-01-02T15:04:05Z" }}">{{ .Date | time.Format "January 2, 2006" }} at {{ .Date | time.Format "3:04:05 PM" }}</time></a></p>
-    </li>
-    <hr \>
-  {{ end }}
+{{ template "_internal/pagination.html" . }}
+<hr \>
+{{ range .Paginator.Pages }}
+  {{ .Render "li" }}
+{{ end }}
+{{ template "_internal/pagination.html" . }}
 </ul>
 {{ end }}
