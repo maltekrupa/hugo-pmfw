@@ -1,9 +1,7 @@
 {{ define "main" }}
 {{- if and .Title .Date -}}
 <h3>
-  {{ .Title }}
-  <br>
-  Publication date: {{ .Date.Format "2006-01-02" }}
+   {{ .Title }} - {{ .Date.Format "2006-01-02" }}
 </h3>
 {{- end -}}
 {{ .Content }}
