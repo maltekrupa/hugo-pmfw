@@ -5,6 +5,3 @@
 {{ range $index, $element := .Site.Params.Nav.Bottom }}
 <a href="{{ $element.url }}">{{ $element.title }}</a>{{ if not $index }} |{{ end }}
 {{ end }}
-<p>
-This site is built using <a href="https://gohugo.io/">hugo</a> and a <a href="https://github.com/maltekrupa/hugo-pmfw">custom theme</a>.
-</p>
