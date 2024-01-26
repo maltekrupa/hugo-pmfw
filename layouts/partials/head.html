@@ -1,11 +1,20 @@
 <meta charset="utf-8">
+{{ if .Title }}
 <meta property="og:title" content="{{ .Title }}" />
+{{ else }}
+<meta property="og:title" content="{{ .Site.Title }}" />
+{{ end }}
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:image" content="https://nafn.de/favicon.ico" />
+<meta property="og:image" content="{{ .Site.Params.opengraph_image }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{ if .Site.Params.Slogan }}
 <meta name="description" content="{{ .Site.Title }} - {{ .Site.Params.Slogan }}">
 <title>{{ .Site.Title }} - {{ .Site.Params.Slogan }}</title>
+{{ else }}
+<meta name="description" content="{{ .Site.Title }}">
+<title>{{ .Site.Title }}</title>
+{{ end }}
 {{ $css := resources.Get "style.css" }}
 {{ $style := $css | resources.Minify }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" />
