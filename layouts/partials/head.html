@@ -1,4 +1,8 @@
 <meta charset="utf-8">
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="https://nafn.de/favicon.ico" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ .Site.Title }} - {{ .Site.Params.Slogan }}">
 <title>{{ .Site.Title }} - {{ .Site.Params.Slogan }}</title>
